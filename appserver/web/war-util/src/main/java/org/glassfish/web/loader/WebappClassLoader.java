@@ -1679,7 +1679,7 @@ public class WebappClassLoader
 
     @SuppressWarnings("unchecked")
     private URL[] removeDuplicate(ArrayList<URL> urls) {
-        HashSet h = new HashSet(urls);
+        LinkedHashSet h = new LinkedHashSet(urls);
         urls.clear();
         urls.addAll(h);
         return urls.toArray(new URL[urls.size()]);
